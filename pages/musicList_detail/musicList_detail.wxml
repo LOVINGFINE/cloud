@@ -1,0 +1,27 @@
+<header></header>
+<view class="top">
+ <image class="top_img" src="{{top.url}}" mode="widthFix">
+ <text class="topPlay"><text class="icon-play3"></text>asdasdas</text>
+ </image>
+ <view class="top_message">
+ <view class="top_name">{{top.name}}</view>
+ <view class="top_nickname"><image src="{{top.nickImg}}" class="nickImg" mode="widthFix"></image>{{top.nickname}}</view>
+ <view class="top_tag">{{top.des}}</view>
+ </view>
+</view>
+<view class="main">
+<view class="musicList_method">
+   <navigator class="playAllSongs icon-play-circle"></navigator><text class="musicList_m">播放全部<text class="number">(共20首)</text></text>
+</view>
+<view class="body">
+<navigator class="songLink" wx:for="{{playlist}}" wx:key="index" url="../song/song?id={{item.id}}">
+<text class="num">{{index+1}}</text>
+<view class="item_mess">
+<text class="name">{{item.name}}<text class="nameAl">{{item.alia[0]===undefind?'':'('+item.alia[0]+')'}}</text></text>
+<text class="name nickname">{{item.ar[0].name}}-{{item.al.name}}</text>
+</view>
+</navigator>
+</view>
+</view>
+<bar></bar>
+

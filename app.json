@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ranklist/ranklist",
+    "pages/albums/albums",
+    "pages/djRadio_detail/detail",
+    "pages/djRadio/djRadio",
+    "pages/mvPage/mvPage",
+    "pages/ranklist_detail/ranklist_detail",
+    "pages/albums_detail/albums_detail",
+    "pages/song/song",
+    "pages/musicList/musicList",
+    "pages/musicList_detail/musicList_detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "LF MUSIC",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

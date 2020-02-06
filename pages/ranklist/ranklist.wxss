@@ -1,0 +1,81 @@
+
+.top {
+  width: 100%;
+  height: 100rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  background-color: rgb(24, 24, 24); 
+  z-index: 1000;
+}
+#hr {
+  width: 100%;
+  height: 1rpx;
+  margin-top: 100rpx;
+}
+.rankTitle {
+  color: #fff;
+  width: 95%;
+  margin: 0 auto;
+  line-height: 70rpx;
+  margin-bottom: 15rpx;
+}
+.main {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 40rpx;
+}
+.rankLink {
+  margin-bottom: 30rpx;
+}
+.rankImg {
+  width: 250rpx;
+  height: 250rpx;
+  float: left;
+  border-radius: 5px;
+  background-color: red;
+  position: relative;
+ 
+}
+.updateMs {
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 10rpx;
+   padding-left: 10rpx;
+}
+.songAll {
+  float: right;
+  color: #fff;
+  width: 50%;
+}
+.songName {
+  display: block;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.rankreLink {
+  width: 30%;
+  height: 284rpx;
+  float: left;
+  margin-right: 3%;
+}
+.rankreLink:nth-child(3n){
+  margin-right: 0;
+}
+.rankreImg {
+  width: 100%;
+  height: 214rpx;
+  border-radius: 4px;
+  position: relative;
+}
+.rankName {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 35rpx;
+  color: #fff;
+}

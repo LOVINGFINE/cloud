@@ -1,0 +1,14 @@
+<view class="header">
+   <navigator class="logo" url="../index/index">
+      <image class="header_img" src="../../../images/logo.png"></image>
+   </navigator>
+   <text class="header_name">LF</text>
+   <text class="title_header">发现音乐，发现世界</text>
+   <view class="topPlay">
+      <text id=""></text>
+   </view>
+</view>
+<view class="search">
+   <navigator class="search_headerIco icon-search1" hover-class="searchChange"></navigator>
+   <input class="search_ipt" placeholder="搜索"></input>
+</view>

@@ -1,0 +1,29 @@
+<bar></bar>
+<view class="top">
+  排行榜
+  <view id="play_box"></view>
+</view>
+<view id="hr"></view>
+
+<view class="rankTitle">官方榜</view>
+<view class="main">
+  <navigator class="rankLink clearfix" wx:for="{{rankData}}" wx:key="index" wx:if="{{index<4}}">
+    <image class="rankImg" src="{{item.coverImgUrl}}">
+      <text class="updateMs">{{item.updateFrequency}}</text>
+    </image>
+    <view class="songAll">
+      <text class="songName over_dots">1.{{item.tracks[0].first}}-{{item.tracks[0].second}}</text>
+      <text class="songName over_dots">2.{{item.tracks[1].first}}-{{item.tracks[1].second}}</text>
+      <text class="songName over_dots">3.{{item.tracks[2].first}}-{{item.tracks[2].second}}</text>
+    </view>
+  </navigator>
+</view>
+<view class="rankTitle">推荐榜</view>
+<view class="main clearfix">
+  <navigator class="rankreLink" wx:for="{{rankData}}" wx:key="index" wx:if="{{index>3&index<10}}">
+    <image class="rankreImg" src="{{item.coverImgUrl}}">
+      <text class="updateMs">{{item.updateFrequency}}</text>
+    </image>
+    <text class="rankName">{{item.name}}</text>
+  </navigator>
+</view>

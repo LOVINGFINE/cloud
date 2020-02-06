@@ -1,0 +1,18 @@
+<view class="footer">
+<navigator class="footer_link" url="../index/index">
+<view class="link_i icon-spinner4"></view>
+<text class="bar_name">发现</text>
+</navigator>
+<navigator class="footer_link" url="../index/index">
+<view class="link_i icon-play"></view>
+<text class="bar_name">视频</text>
+</navigator>
+<navigator class="footer_link" url="../index/index">
+<view class="link_i icon-music"></view>
+<text class="bar_name">我的</text>
+</navigator>
+<navigator class="footer_link" url="../index/index">
+<view class="link_i icon-user"></view>
+<text class="bar_name">账号</text>
+</navigator>
+</view>

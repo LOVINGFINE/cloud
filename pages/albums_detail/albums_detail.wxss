@@ -1,0 +1,7 @@
+/* pages/albums_detail/albums_detail.wxss */
+.albumsTitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}

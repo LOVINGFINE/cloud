@@ -1,0 +1,131 @@
+<header></header>
+<view class="top">
+  <scroll-view class="topNav" scroll-x="true">
+    <navigator class="topNavLink">推荐</navigator>
+    <navigator class="topNavLink">官方</navigator>
+    <navigator class="topNavLink" id="red">精品</navigator>
+    <navigator class="topNavLink">华语</navigator>
+    <navigator class="topNavLink">民谣</navigator>
+    <navigator class="topNavLink">古风</navigator>
+    <navigator class="topNavLink">欧美</navigator>
+    <navigator class="topNavLink">轻音乐</navigator>
+    <navigator class="topNavLink">流行</navigator>
+    <navigator class="topNavLink">乡村</navigator>
+    <navigator class="topNavLink">舞曲</navigator>
+  </scroll-view>
+  <view class="classAll icon-grid" bindtap="boxShow" hover-class="classAllChange"></view>
+</view>
+<scroll-view class="classAllBox" scroll-y animation="{{boxAnimation}}">
+  <text class="class_title">语种</text>
+  <view class="class_body clearfix">
+    <navigator class="class_bodyLink">华语</navigator>
+    <navigator class="class_bodyLink">欧美</navigator>
+    <navigator class="class_bodyLink">日语</navigator>
+    <navigator class="class_bodyLink">韩语</navigator>
+    <navigator class="class_bodyLink">粤语</navigator>
+  </view>
+  <text class="class_title">风格</text>
+  <view class="class_body clearfix">
+    <navigator class="class_bodyLink">流行</navigator>
+    <navigator class="class_bodyLink">摇滚</navigator>
+    <navigator class="class_bodyLink">民谣</navigator>
+    <navigator class="class_bodyLink">电子</navigator>
+    <navigator class="class_bodyLink">舞曲</navigator>
+    <navigator class="class_bodyLink">说唱</navigator>
+    <navigator class="class_bodyLink">轻音乐</navigator>
+    <navigator class="class_bodyLink">爵士</navigator>
+    <navigator class="class_bodyLink">乡村</navigator>
+    <navigator class="class_bodyLink">R&B/Soul</navigator>
+    <navigator class="class_bodyLink">古典</navigator>
+    <navigator class="class_bodyLink">民族</navigator>
+    <navigator class="class_bodyLink">英伦</navigator>
+    <navigator class="class_bodyLink">金属</navigator>
+    <navigator class="class_bodyLink">朋克</navigator>
+    <navigator class="class_bodyLink">蓝调</navigator>
+    <navigator class="class_bodyLink">雷鬼</navigator>
+    <navigator class="class_bodyLink">世界音乐</navigator>
+    <navigator class="class_bodyLink">拉丁</navigator>
+    <navigator class="class_bodyLink">New Age</navigator>
+    <navigator class="class_bodyLink">古风</navigator>
+    <navigator class="class_bodyLink">后摇</navigator>
+    <navigator class="class_bodyLink">Bossa Nova</navigator>
+
+  </view>
+  <text class="class_title">场景</text>
+  <view class="class_body clearfix">
+    <navigator class="class_bodyLink">清晨</navigator>
+    <navigator class="class_bodyLink">夜晚</navigator>
+    <navigator class="class_bodyLink">学习</navigator>
+    <navigator class="class_bodyLink">工作</navigator>
+    <navigator class="class_bodyLink">午休</navigator>
+    <navigator class="class_bodyLink">下午茶</navigator>
+    <navigator class="class_bodyLink">地铁</navigator>
+    <navigator class="class_bodyLink">驾车</navigator>
+    <navigator class="class_bodyLink">运动</navigator>
+    <navigator class="class_bodyLink">旅行</navigator>
+    <navigator class="class_bodyLink">散步</navigator>
+    <navigator class="class_bodyLink">酒吧</navigator>
+  </view>
+  <text class="class_title">情感</text>
+  <view class="class_body clearfix">
+    <navigator class="class_bodyLink">怀旧</navigator>
+    <navigator class="class_bodyLink">清新</navigator>
+    <navigator class="class_bodyLink">浪漫</navigator>
+    <navigator class="class_bodyLink">伤感</navigator>
+    <navigator class="class_bodyLink">治愈</navigator>
+    <navigator class="class_bodyLink">放松</navigator>
+    <navigator class="class_bodyLink">孤独</navigator>
+    <navigator class="class_bodyLink">感动</navigator>
+    <navigator class="class_bodyLink">兴奋</navigator>
+    <navigator class="class_bodyLink">快乐</navigator>
+    <navigator class="class_bodyLink">安静</navigator>
+    <navigator class="class_bodyLink">思念</navigator>
+  </view>
+  <text class="class_title">主题</text>
+  <view class="class_body clearfix">
+    <navigator class="class_bodyLink">影视原声</navigator>
+    <navigator class="class_bodyLink">ACG</navigator>
+    <navigator class="class_bodyLink">儿童</navigator>
+    <navigator class="class_bodyLink">校园</navigator>
+    <navigator class="class_bodyLink">游戏</navigator>
+    <navigator class="class_bodyLink">70后</navigator>
+    <navigator class="class_bodyLink">80后</navigator>
+    <navigator class="class_bodyLink">90后</navigator>
+    <navigator class="class_bodyLink">网络歌曲</navigator>
+    <navigator class="class_bodyLink">KTV</navigator>
+    <navigator class="class_bodyLink">经典</navigator>
+    <navigator class="class_bodyLink">翻唱</navigator>
+    <navigator class="class_bodyLink">吉他</navigator>
+    <navigator class="class_bodyLink">钢琴</navigator>
+    <navigator class="class_bodyLink">器乐</navigator>
+    <navigator class="class_bodyLink">榜单</navigator>
+    <navigator class="class_bodyLink">00后</navigator>
+  </view>
+</scroll-view>
+<view class="banner">
+<swiper previous-margin='150rpx' next-margin='150rpx' bindchange="swiperChange" autoplay="true" interval="5000" circular="true">
+  <swiper-item wx:for='{{imgList}}' wx:key='index' wx:if='{{index<12}}'>
+    <navigator class="musicListLink" url="../musicList_detail/musicList_detail?id={{item.id}}">
+      <image class='le-img {{nowIdx==index?"le-active":""}}' src='{{item.picUrl}}' mode="widthFix">
+        <text class="musicName">{{item.name}}</text>
+        <text class="icon-play1 palyBanner"></text>
+      </image>
+    </navigator>
+  </swiper-item>
+</swiper>
+</view>
+
+<view class="main">
+  <view class="mainItem" wx:for='{{imgList}}' wx:key='index' wx:if='{{index>11}}'>
+    <navigator class="mainItemLink" url="../musicList_detail/musicList_detail?id={{item.id}}">
+      <image class="mainItemImg" src="{{item.picUrl}}" mode="widthFix">
+        <text class="icon-play1 palyMain"></text>
+        <text class="musicList_playCount">
+      <text class="icon-headphones"></text>{{item.playCount>10000?(item.playCount/10000)+"万":item.playCount}}
+        </text>
+      </image>
+    </navigator>
+    <text class="mainItem_Name">{{item.name}}</text>
+  </view>
+</view>
+<bar></bar>

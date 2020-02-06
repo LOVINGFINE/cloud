@@ -1,0 +1,31 @@
+<view class="top">
+  <text class="songName">{{songDetail.songName}}</text>
+  <navigator class="songer icon-chevron-right">{{songDetail.songer}}</navigator>
+</view>
+<view class="main" hidden="{{show}}">
+    <image id="songImg" class="{{play?'songPlay':''}}" src="{{songDetail.imgUrl}}" bindtap="boxChange" mode="widthFix"></image>
+</view>
+<view class="main" hidden="{{hide}}">
+<scroll-view class="lyricBox" bindtap="lyrBoxChange" scroll-y="true" >
+<text class="lrcItem {{item.time<current&&current<songLrc[index+1].time?'lrcLight':''}}" wx:for="{{songLrc}}" wx:key="index">{{item.content}}</text>
+</scroll-view>
+</view>
+<view class="method">
+  <view class="progress">
+    <text class="songCurrentTime">{{currentText}}</text>
+    <view class="songLength">
+      <view class="songCurrentLen" style="width:{{len}}rpx">
+        <text class="song_dot"></text>
+      </view>
+    </view>
+    <text class="songDurationTime">{{songTime}}</text>
+  </view>
+  <view class="play_settings">
+    <view class="playType icon-repeat" hover-class="changeColor"></view>
+    <view class="playPev icon-skip-back" hover-class="changeColor"></view>
+    <view class="play-Stop {{play?'icon-pause-circle':'icon-play-circle'}}" hover-class="changeColor" bindtap="playEvent"></view>
+    <view class="playNext icon-skip-forward" hover-class="changeColor"></view>
+    <view class="songList icon-list" hover-class="changeColor"></view>
+  </view>
+  <view id="bottomTag"></view>
+</view>

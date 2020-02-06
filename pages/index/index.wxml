@@ -1,0 +1,94 @@
+<header></header>
+<view class="top_nav">
+  <view class="nav_a">
+    <navigator class="nav_ico icon-file-text" url=""></navigator>
+    <text class="nav_name">每日推荐</text>
+  </view>
+  <view class="nav_a">
+    <navigator class="nav_ico icon-file-music" url="../musicList/musicList"></navigator>
+    <text class="nav_name">歌单</text>
+  </view>
+  <view class="nav_a">
+    <navigator class="nav_ico icon-stats-bars2" url="../ranklist/ranklist"></navigator>
+    <text class="nav_name">排行榜</text>
+  </view>
+  <view class="nav_a">
+    <navigator class="nav_ico icon-podcast" url="../djRadio/djRadio"></navigator>
+    <text class="nav_name">电台</text>
+  </view>
+  <view class="nav_a">
+    <navigator class="nav_ico icon-play" url="../mvPage/mvPage"></navigator>
+    <text class="nav_name">MV</text>
+  </view>
+</view>
+
+<view class="banner">
+  <swiper indicator-dots="true" autoplay="true" interval="5000" circular="true" class="banners_nav">
+    <swiper-item class="banners_navItem" wx:for="{{banners}}" wx:key="index">
+      <navigator class="banner_link">
+        <image src="{{item.imageUrl}}" class="bannder_img" mode="widthFix"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="recommend">
+  <text class="title">推荐歌单</text>
+  <navigator class="more" url="../musicList/musicList">更多歌单</navigator>
+</view>
+<view class="musicList clearfix">
+  <view class="musicList_item" wx:for="{{musicLists}}" wx:key="index">
+    <navigator class="musicList_link" url="../musicList_detail/musicList_detail?id={{item.id}}">
+      <image src="{{item.picUrl}}" class="musicList_img" mode="widthFix">
+      <text class="icon-play1 palyMain"></text>
+        <text class="musicList_playCount">
+      <text class="icon-headphones"></text>{{item.playCount>10000?(item.playCount/10000)+"万":item.playCount}}
+        </text>
+      </image>
+    </navigator>
+    <text class="musicList_name">{{item.name}}</text>
+  </view>
+</view>
+<view class="recommend">
+  <text class="title">推荐专辑</text>
+  <navigator class="more">查看更多</navigator>
+</view>
+<view class="Album clearfix">
+  <view class="Album_item" wx:for="{{albums}}" wx:key="index" wx:if="{{index<4}}">
+    <navigator class="Album_link">
+      <image src="{{item.picUrl}}" class="Album_img"></image>
+    </navigator>
+    <text class="Album_name">{{item.name}}</text>
+    <text class="Album_name">{{item.artist.name}}</text>
+  </view>
+</view>
+<view class="recommend">
+  <text class="title">热门电台</text>
+  <navigator class="more">查看更多</navigator>
+</view>
+<view class="djRadios clearfix">
+
+  <view class="djRadios_item" wx:for="{{djRadios}}" wx:key="index">
+    <navigator class="djRadios_link">
+      <image src="{{item.picUrl}}" class="djRadios_img"></image>
+      <text class="djRadios_name">{{item.name}}</text>
+    </navigator>
+    <navigator class="djRadios_type">{{item.category}}</navigator>
+    <navigator class="djRadios_per">{{item.dj.nickname}}</navigator>
+  </view>
+</view>
+<view class="recommend">
+  <text class="title">推荐MV</text>
+  <navigator class="more">更多MV</navigator>
+</view>
+<view class="mvList clearfix">
+  <view class="mvList_item" wx:for="{{mvData}}" wx:key="index">
+    <navigator class="mvList_itemLink">
+      <text class="icon-youtube"></text>
+      <image class="mvLink" src="{{item.picUrl}}" mode="widthFix"></image>
+      <text class="mvPlayCount"><text class="icon-play1"></text>{{item.playCount>10000?(item.playCount/10000)+"万":item.playCount}}</text>
+    </navigator>
+    <text class="mvName">{{item.copywriter}}</text>
+    <text class="mvName mvName_red">{{item.artistName}}</text>
+  </view>
+</view>
+<bar></bar>
